@@ -2,32 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 2rem;
+  color: #000;
+  background: #fcfcfc;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding: 2rem;
+  border: 1px solid #e9e9e9;
+  background-color: white;
+  border-radius: 0.25rem;
+}
+
+textarea {
+  border: 1px solid dimgray;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+button {
+  border: 1px solid dimgray;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background: #ddd;
+}
+
+button:hover {
+  background: #eee;
+}
+
+button:disabled {
+  color: #999;
+  cursor: not-allowed;
 }
